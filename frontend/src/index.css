@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --av-bg: #0a0f2c;
+  --av-accent: #00e5ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--av-bg);
+  color: #e8f4fd;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Glassmorphism — the signature AquaVault card */
+.glass {
+  background: rgba(13, 27, 75, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 16px;
+}
+
+.glass-bright {
+  background: rgba(20, 38, 96, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.32);
+  border-radius: 16px;
+}
+
+.font-display {
+  font-family: 'Orbitron', 'Inter', sans-serif;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 2px;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f2c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2f6e;
+  border-radius: 8px;
+}
+
+/* Decorative motion only — never drives financial data */
+@media (prefers-reduced-motion: reduce) {
+  .animate-wave,
+  .animate-wave-slow,
+  .animate-spin-slow,
+  .animate-floaty {
+    animation: none !important;
+  }
+}
